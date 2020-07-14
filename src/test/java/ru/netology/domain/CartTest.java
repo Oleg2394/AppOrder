@@ -44,7 +44,8 @@ public class CartTest {
         $("[data-test-id=name] input").setValue("Олег Иванов");
         $("[data-test-id=phone] input").setValue("+79999999999");
         $(By.className("button")).click();
-        $(".checkbox__text").shouldHave(cssValue("color", "rgba(255, 92, 92, 1)"));
+       // $(".checkbox__text").shouldHave(cssValue("color", "rgba(255, 92, 92, 1)"));
+        $("[data-test-id=agreement].input_invalid").shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
     }
 
     @Test
